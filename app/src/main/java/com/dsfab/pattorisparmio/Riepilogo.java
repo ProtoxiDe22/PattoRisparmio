@@ -82,6 +82,10 @@ public class Riepilogo extends AppCompatActivity {
         Intent intent= new Intent(this,ActionsList.class);
         startActivity(intent);
     }
+    public void openSettings(View view) {
+        Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -97,7 +101,7 @@ public class Riepilogo extends AppCompatActivity {
                 //todo open info activity
                 return true;
             case R.id.action_settings:
-                //todo open settings activity
+                openSettings(item.getActionView());
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
