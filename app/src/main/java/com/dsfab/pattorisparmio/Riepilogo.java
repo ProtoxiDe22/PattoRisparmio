@@ -50,6 +50,11 @@ public class Riepilogo extends AppCompatActivity {
         super.onResume();
         updateTextViews();
     }
+    @Override
+    protected void onRestart(){
+        super.onRestart();
+        updateTextViews();
+    }
     private void updateTextViews(){
         Cursor cursor = db.rawQuery("select * from "+DbHelper.tableName, null);
         int count = cursor.getCount();
@@ -86,6 +91,10 @@ public class Riepilogo extends AppCompatActivity {
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
+    public void openAbout(View view){
+        Intent intent = new Intent(this, AboutActivity.class);
+        startActivity(intent);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -98,7 +107,7 @@ public class Riepilogo extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item){
         switch(item.getItemId()){
             case R.id.action_info:
-                //todo open info activity
+                openAbout(item.getActionView());
                 return true;
             case R.id.action_settings:
                 openSettings(item.getActionView());

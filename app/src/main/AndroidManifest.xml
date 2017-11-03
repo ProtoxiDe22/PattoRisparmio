@@ -24,12 +24,18 @@
                 android:value="com.dsfab.pattorisparmio.Riepilogo" />
         </activity>
         <activity
-            android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings"
+            android:name=".AboutActivity"
             android:parentActivityName=".Riepilogo">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.dsfab.pattorisparmio.Riepilogo" />
+        </activity>
+        <activity android:name=".SettingsActivity"
+            android:parentActivityName=".Riepilogo">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dsfab.pattorisparmio.Riepilogo" />
+
         </activity>
     </application>
 

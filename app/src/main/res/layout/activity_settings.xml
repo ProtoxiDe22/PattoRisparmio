@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.dsfab.pattorisparmio.AboutActivity">
+    tools:context="com.dsfab.pattorisparmio.SettingsActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
@@ -19,21 +19,16 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:layout_constraintHorizontal_bias="0.0" />
 
-    <TextView
-        android:id="@+id/aboutText"
-        android:layout_width="0dp"
+    <ListView
+        android:id="@+id/SettingsList"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/about_text"
-        android:textAppearance="@android:style/TextAppearance.Material.Widget.TextView"
-        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
+        android:clickable="true"
+        android:focusable="true">
 
-        />
-
+    </ListView>
 
 </android.support.constraint.ConstraintLayout>
