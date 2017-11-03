@@ -16,7 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActionsList"></activity>
+        <activity android:name=".ActionsList"
+            android:parentActivityName="com.dsfab.pattorisparmio.Riepilogo">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dsfab.pattorisparmio.Riepilogo" />
+        </activity>
     </application>
 
 </manifest>
