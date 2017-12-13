@@ -29,8 +29,6 @@ public class Riepilogo extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        dbHelper = new DbHelper(this);
-        db = dbHelper.getWritableDatabase();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_riepilogo);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
@@ -56,6 +54,8 @@ public class Riepilogo extends AppCompatActivity {
         updateTextViews();
     }
     private void updateTextViews(){
+        dbHelper = new DbHelper(this);
+        db = dbHelper.getWritableDatabase();
         Cursor cursor = db.rawQuery("select * from "+DbHelper.tableName, null);
         int count = cursor.getCount();
         TextView actiontxt = (TextView) findViewById(R.id.Actions);
