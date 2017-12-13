@@ -2,11 +2,12 @@
     <string name="app_name">Risparmio Energetico</string>
     <string-array name="Actions">
         <item>Spegni le luci accese inutilmente</item>
-        <item>Chiudi il Rubinetto dell\'acqua</item>
+        <item>Chiudi il Rubinetto dell\'acqua dopo l\'uso</item>
         <item>Spegni gli strumenti in stand-by</item>
         <item>Fai la raccolta differenziata</item>
         <item>Mantieni in buono stato le cose</item>
         <item>Evita sprechi alimentari</item>
+        <item>Recati a scuola a piedi o con la bici</item>
     </string-array>
     <string name="action_settings">Impostazioni</string>
     <string name="action_info">Info</string>
